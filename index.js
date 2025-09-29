@@ -37,7 +37,9 @@ import router from "./routes/careerRoutes.js";
 app.use("/api/contacts", contactRoutes);
 app.use("/api/careers", router);
 
-
+app.get("/", (req, res) => {
+  res.send("👋 Welcome to BytesFlare Infotech Backend API");
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
